@@ -2660,6 +2660,9 @@ const C2_CONTENT = [
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
+// helper — must be first
+const id = s => document.getElementById(s);
+
 // ══════════════════════════════════════════════════════
 //  CONFIG — replace these two values then upload
 // ══════════════════════════════════════════════════════
@@ -2822,7 +2825,6 @@ id('auth-modal').onclick = e => { if (e.target === id('auth-modal')) closeModal(
 // ══════════════════════════════════════════════════════
 //  HELPERS
 // ══════════════════════════════════════════════════════
-const id = s => document.getElementById(s);
 
 function chipSel(groupId, el) {
   document.querySelectorAll('#'+groupId+' .chip').forEach(c => c.classList.remove('on'));
